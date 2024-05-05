@@ -1,5 +1,6 @@
 import AllDB.Database;
 import controller.FirmaController;
+import controller.MusteriController;
 import controller.UcakController;
 import entity.Firma;
 import entity.Ucak;
@@ -38,6 +39,9 @@ public class Main {
         ucakController.save(1,"boening 747",780,Database.firmalar.get(2));
         ucakController.findAll().forEach(System.out::println);
 
+        MusteriController musteriController= new MusteriController();
+        musteriController.save(1,"hasan","duran","5555555555");
 
+        Database.musteriler.forEach(System.out::println);
     }
 }

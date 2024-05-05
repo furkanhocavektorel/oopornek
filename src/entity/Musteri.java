@@ -59,4 +59,15 @@ public class Musteri {
     public void setYas(int yas) {
         this.yas = yas;
     }
+
+    @Override
+    public String toString() {
+        return "Musteri{" +
+                "id=" + id +
+                ", ad='" + ad + '\'' +
+                ", soyad='" + soyad + '\'' +
+                ", tel='" + tel + '\'' +
+                ", yas=" + yas +
+                '}';
+    }
 }
