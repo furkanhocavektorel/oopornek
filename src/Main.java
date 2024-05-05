@@ -1,7 +1,9 @@
 import AllDB.Database;
+import controller.BiletContorller;
 import controller.FirmaController;
 import controller.MusteriController;
 import controller.UcakController;
+import entity.BiletSinifi;
 import entity.Firma;
 import entity.Ucak;
 
@@ -42,6 +44,20 @@ public class Main {
         MusteriController musteriController= new MusteriController();
         musteriController.save(1,"hasan","duran","5555555555");
 
+        musteriController.save(2,"ela","kavak","4444444444");
         Database.musteriler.forEach(System.out::println);
+
+        BiletContorller biletContorller= new BiletContorller();
+
+
+        System.out.println(biletContorller.save(1,"2134qw4",2000,1,150, BiletSinifi.STANDART));
+
+
+        System.out.println(biletContorller.save(2,"66t8",8000,2,3, BiletSinifi.FIRST_CLASS));
+
+
+        System.out.println(biletContorller.satinAl(1,1,1));
+
+
     }
 }

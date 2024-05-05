@@ -20,6 +20,17 @@ public class UcakService implements IUcakService {
     }
 
     @Override
+    public boolean existById(int id) {
+        for (Ucak u : ucakRepository.getAll()){
+           if (u.getId()==id){
+               return true;
+           }
+        }
+
+        return false;
+    }
+
+    @Override
     public void save(int id, String ad, int kapasite, Firma firma) {
         Ucak ucak = new Ucak();
         ucak.setAd(ad);

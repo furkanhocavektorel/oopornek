@@ -12,4 +12,9 @@ public class MusteriService implements IMusteriService {
     public void save(int id, String ad, String soyad, String tel) {
         repository.save(id,ad,soyad,tel);
     }
+
+    @Override
+    public boolean existsById(int id) {
+        return repository.existsById(id);
+    }
 }

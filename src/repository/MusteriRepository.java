@@ -15,4 +15,12 @@ public class MusteriRepository {
         Database.musteriler.add(musteri);
     }
 
+    public boolean existsById(int id) {
+        for (Musteri m : Database.musteriler){
+            if (m.getId()==id){
+                return true;
+            }
+        }
+        return false;
+    }
 }
