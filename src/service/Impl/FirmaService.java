@@ -1,8 +1,9 @@
-package service;
+package service.Impl;
 
 import AllDB.Database;
 import entity.Firma;
 import repository.FirmaRepository;
+import service.IFirmaService;
 
 import java.lang.instrument.ClassDefinition;
 import java.lang.instrument.ClassFileTransformer;

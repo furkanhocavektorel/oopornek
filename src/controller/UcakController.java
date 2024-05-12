@@ -3,7 +3,7 @@ package controller;
 import entity.Firma;
 import entity.Ucak;
 import service.IUcakService;
-import service.UcakService;
+import service.Impl.UcakService;
 
 import java.util.List;
 

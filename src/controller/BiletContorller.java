@@ -1,7 +1,7 @@
 package controller;
 
 import entity.BiletSinifi;
-import service.BiletService;
+import service.Impl.BiletService;
 import service.IBiletService;
 
 public class BiletContorller {

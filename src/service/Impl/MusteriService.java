@@ -1,6 +1,7 @@
-package service;
+package service.Impl;
 
 import repository.MusteriRepository;
+import service.IMusteriService;
 
 public class MusteriService implements IMusteriService {
 

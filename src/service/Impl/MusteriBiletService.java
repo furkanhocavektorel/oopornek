@@ -1,8 +1,9 @@
-package service;
+package service.Impl;
 
 import repository.MusteriBiletRepository;
+import service.IMusteriBiletService;
 
-public class MusteriBiletService  implements IMusteriBiletService{
+public class MusteriBiletService  implements IMusteriBiletService {
 
     private MusteriBiletRepository musteriBiletRepository;
 

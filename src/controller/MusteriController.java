@@ -1,7 +1,7 @@
 package controller;
 
 import service.IMusteriService;
-import service.MusteriService;
+import service.Impl.MusteriService;
 
 public class MusteriController {
     public IMusteriService service;

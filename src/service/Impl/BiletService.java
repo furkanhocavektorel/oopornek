@@ -1,9 +1,12 @@
-package service;
+package service.Impl;
 
-import AllDB.Database;
 import entity.Bilet;
 import entity.BiletSinifi;
 import repository.BiletRepository;
+import service.IBiletService;
+import service.IMusteriBiletService;
+import service.IMusteriService;
+import service.IUcakService;
 
 public class BiletService implements IBiletService {
     private BiletRepository biletRepository;
@@ -32,25 +35,32 @@ public class BiletService implements IBiletService {
 
     @Override
     public String satinAl(int id, int biletId, int musteriId) {
-        if (existsById(biletId) && existsByMusteriIdInMusteri(musteriId)){
+        if (existsById(biletId) && musteriService.existsById(musteriId)){
             musteriBiletService.save(id,musteriId,biletId);
             return "bilet satın alındı...";
         }
         return "bilet alınamadı... bilet veya musteri bulunamadı";
     }
 
+    @Override
+    public void biletSil(int id) {
+
+        // genec
+
+    }
+
     public boolean existsById(int id) {
         for (Bilet b : biletRepository.getAll()) {
             if (b.getId() == id) {
                 return true;
+
             }
         }
         return false;
     }
 
-    public boolean existsByMusteriIdInMusteri(int id){
-        boolean isMusteri=musteriService.existsById(id);
-        return isMusteri;
+    public void updateBilet(int id,int biletFiyat){
+
     }
 
 

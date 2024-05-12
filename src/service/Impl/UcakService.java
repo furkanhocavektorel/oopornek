@@ -1,8 +1,9 @@
-package service;
+package service.Impl;
 
 import entity.Firma;
 import entity.Ucak;
 import repository.UcakRepository;
+import service.IUcakService;
 
 import java.util.List;
 

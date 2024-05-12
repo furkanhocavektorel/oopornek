@@ -5,8 +5,13 @@ import entity.Firma;
 import java.util.List;
 
 public interface IFirmaService {
+    // C.R.U.D.
+    // create
+    // read
+    // update
+    // delete
 
-    public void save(int id, String firmaAdi);
+    public void save(Firma firma);
 
     public List<Firma> getAll();
     public List<Firma> getUcakSayisibesOlanFirmalar();
